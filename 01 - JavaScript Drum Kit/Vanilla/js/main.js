@@ -1,10 +1,9 @@
 (function(){
-    const removeTransition = function(e){
-        console.log(e.propertyName);
+    const removeTransition = function(e) {
         if(e.propertyName !== 'transform' ){
             return;
         }
-        this.classList.remove('playing');
+         this.classList.remove('playing');
     };
 
     const playAudioFromTheBeginning = (audio) =>{
@@ -18,12 +17,12 @@
         const playedKey = document.querySelector(`div.key${dataKeySelector}`);
         if(!audio || !playedKey){
             return;
-        }
+        }  
         audio.currentTime = 0;
         audio.play();
         playedKey.classList.add('playing');
     };
     const keys = document.querySelectorAll('.key');
     keys.forEach(k=>k.addEventListener('transitionend', removeTransition));
-    window.addEventListener('keydown', play);
+    window.addEventListener('keyup', play);
 })();
