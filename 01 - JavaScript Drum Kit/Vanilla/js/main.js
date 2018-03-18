@@ -1,6 +1,10 @@
 (function(){
-    const removeTransition = (e) => {
-        e.target.classList.remove('playing');
+    const removeTransition = function(e){
+        console.log(e.propertyName);
+        if(e.propertyName !== 'transform' ){
+            return;
+        }
+        this.classList.remove('playing');
     };
 
     const playAudioFromTheBeginning = (audio) =>{
@@ -11,7 +15,7 @@
         const dataKeySelector = `[data-key="${e.keyCode}"]`;
         if(e.keyCode == null) console.error("Unexpected empty keyCode");
         const audio = document.querySelector(`audio${dataKeySelector}`);
-        const playedKey = document.querySelector(`div.key:not(.playing)${dataKeySelector}`);
+        const playedKey = document.querySelector(`div.key${dataKeySelector}`);
         if(!audio || !playedKey){
             return;
         }
@@ -19,7 +23,7 @@
         audio.play();
         playedKey.classList.add('playing');
     };
-    const keys = document.querySelectorAll('.keys');
+    const keys = document.querySelectorAll('.key');
     keys.forEach(k=>k.addEventListener('transitionend', removeTransition));
     window.addEventListener('keydown', play);
 })();

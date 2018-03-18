@@ -349,5 +349,6 @@ main {
     text-shadow: var(--text-shadow-x) var(--text-shadow-y) 2px var(--white);
     border-color: var(--green);
     box-shadow: .2rem 0.2rem 1rem var(--green);
+    transform: scale(1.1);
 }
 
