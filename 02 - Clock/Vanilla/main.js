@@ -10,7 +10,7 @@
         const date = new Date();
         transformHand(date.getSeconds()/60, secondsHand);
         transformHand(date.getMinutes()/60, minutesHand);
-        transformHand(date.getHours()/24, hoursHand);
+        transformHand(date.getHours()/12, hoursHand);
     }
 
     setInterval(setTime, 1000);
