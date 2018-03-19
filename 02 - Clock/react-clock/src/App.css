@@ -1,0 +1,9 @@
+main {
+  --clock-size: 30rem;
+  height: 100%;
+  width: 100%;
+  --position-offset: calc(50% - var(--clock-size)/2);
+  position: absolute;
+  top: var(--position-offset);
+  left: var(--position-offset);
+}

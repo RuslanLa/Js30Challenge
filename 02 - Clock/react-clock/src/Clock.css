@@ -1,0 +1,12 @@
+.clock {
+    height: var(--clock-size);
+    width: var(--clock-size);
+    border: 35px solid white;
+    border-radius: 50%;
+  }
+  
+  .clock-face{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
