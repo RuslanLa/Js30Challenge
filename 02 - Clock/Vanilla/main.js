@@ -2,17 +2,14 @@
     const secondsHand = document.querySelector('.second-hand');
     const minutesHand = document.querySelector('.min-hand');
     const hoursHand = document.querySelector('.hour-hand');
-    function transformHand(handRelativeValue, hand){
-        const degrees = handRelativeValue*360 + 90;
-        hand.style.transform = `rotate(${degrees}deg)`;
+    function animateHand(handValue, animationBasis, duration, hand){
+        hand.style.animation = `time${animationBasis}-${handValue} ${duration}s infinite`;
     }
     function setTime(){
         const date = new Date();
-        transformHand(date.getSeconds()/60, secondsHand);
-        transformHand(date.getMinutes()/60, minutesHand);
-        transformHand(date.getHours()/12, hoursHand);
+        animateHand(date.getSeconds(), 60, 60, secondsHand);
+        animateHand(date.getMinutes(), 60, 3600, minutesHand);
+        animateHand(date.getHours()%12, 12, 3600*12, hoursHand);
     }
-
-    setInterval(setTime, 1000);
     setTime();
 })();

@@ -1,40 +1,405 @@
-html, body {
+html {
+  height: 100%; }
+  html body {
     height: 100%;
-}
+    background: linear-gradient(to right, #93cede 0%, #75bdd1 41%, #49a5bf 100%); }
+    html body main {
+      --clock-size: 30rem;
+      height: 100%;
+      width: 100%;
+      --position-offset: calc(50% - var(--clock-size) / 2);
+      position: absolute;
+      top: var(--position-offset);
+      left: var(--position-offset); }
+      html body main .clock {
+        height: var(--clock-size);
+        width: var(--clock-size);
+        border: 35px solid white;
+        border-radius: 50%; }
+        html body main .clock .clock-face {
+          position: relative;
+          width: 100%;
+          height: 100%; }
+          html body main .clock .clock-face .hand {
+            --hand-height: 6px;
+            width: 50%;
+            height: var(--hand-height);
+            background: black;
+            top: calc(50% - var(--hand-height) / 2);
+            position: absolute;
+            transform: rotate(90deg);
+            transform-origin: 100%;
+            transition: all 0.05s ease-out; }
 
-body {
-    background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-}
-main {
-    --clock-size: 30rem;
-    height: 100%;
-    width: 100%;
-    --position-offset: calc(50% - var(--clock-size)/2);
-    position: absolute;
-    top: var(--position-offset);
-    left: var(--position-offset);
-}
-.clock {
-    height: var(--clock-size);
-    width: var(--clock-size);
-    border: 35px solid white;
-    border-radius: 50%;
-}
+@keyframes time60-0 {
+  from {
+    transform: rotate(90deg); }
+  to {
+    transform: rotate(450deg); } }
+@keyframes time60-1 {
+  from {
+    transform: rotate(96deg); }
+  to {
+    transform: rotate(456deg); } }
+@keyframes time60-2 {
+  from {
+    transform: rotate(102deg); }
+  to {
+    transform: rotate(462deg); } }
+@keyframes time60-3 {
+  from {
+    transform: rotate(108deg); }
+  to {
+    transform: rotate(468deg); } }
+@keyframes time60-4 {
+  from {
+    transform: rotate(114deg); }
+  to {
+    transform: rotate(474deg); } }
+@keyframes time60-5 {
+  from {
+    transform: rotate(120deg); }
+  to {
+    transform: rotate(480deg); } }
+@keyframes time60-6 {
+  from {
+    transform: rotate(126deg); }
+  to {
+    transform: rotate(486deg); } }
+@keyframes time60-7 {
+  from {
+    transform: rotate(132deg); }
+  to {
+    transform: rotate(492deg); } }
+@keyframes time60-8 {
+  from {
+    transform: rotate(138deg); }
+  to {
+    transform: rotate(498deg); } }
+@keyframes time60-9 {
+  from {
+    transform: rotate(144deg); }
+  to {
+    transform: rotate(504deg); } }
+@keyframes time60-10 {
+  from {
+    transform: rotate(150deg); }
+  to {
+    transform: rotate(510deg); } }
+@keyframes time60-11 {
+  from {
+    transform: rotate(156deg); }
+  to {
+    transform: rotate(516deg); } }
+@keyframes time60-12 {
+  from {
+    transform: rotate(162deg); }
+  to {
+    transform: rotate(522deg); } }
+@keyframes time60-13 {
+  from {
+    transform: rotate(168deg); }
+  to {
+    transform: rotate(528deg); } }
+@keyframes time60-14 {
+  from {
+    transform: rotate(174deg); }
+  to {
+    transform: rotate(534deg); } }
+@keyframes time60-15 {
+  from {
+    transform: rotate(180deg); }
+  to {
+    transform: rotate(540deg); } }
+@keyframes time60-16 {
+  from {
+    transform: rotate(186deg); }
+  to {
+    transform: rotate(546deg); } }
+@keyframes time60-17 {
+  from {
+    transform: rotate(192deg); }
+  to {
+    transform: rotate(552deg); } }
+@keyframes time60-18 {
+  from {
+    transform: rotate(198deg); }
+  to {
+    transform: rotate(558deg); } }
+@keyframes time60-19 {
+  from {
+    transform: rotate(204deg); }
+  to {
+    transform: rotate(564deg); } }
+@keyframes time60-20 {
+  from {
+    transform: rotate(210deg); }
+  to {
+    transform: rotate(570deg); } }
+@keyframes time60-21 {
+  from {
+    transform: rotate(216deg); }
+  to {
+    transform: rotate(576deg); } }
+@keyframes time60-22 {
+  from {
+    transform: rotate(222deg); }
+  to {
+    transform: rotate(582deg); } }
+@keyframes time60-23 {
+  from {
+    transform: rotate(228deg); }
+  to {
+    transform: rotate(588deg); } }
+@keyframes time60-24 {
+  from {
+    transform: rotate(234deg); }
+  to {
+    transform: rotate(594deg); } }
+@keyframes time60-25 {
+  from {
+    transform: rotate(240deg); }
+  to {
+    transform: rotate(600deg); } }
+@keyframes time60-26 {
+  from {
+    transform: rotate(246deg); }
+  to {
+    transform: rotate(606deg); } }
+@keyframes time60-27 {
+  from {
+    transform: rotate(252deg); }
+  to {
+    transform: rotate(612deg); } }
+@keyframes time60-28 {
+  from {
+    transform: rotate(258deg); }
+  to {
+    transform: rotate(618deg); } }
+@keyframes time60-29 {
+  from {
+    transform: rotate(264deg); }
+  to {
+    transform: rotate(624deg); } }
+@keyframes time60-30 {
+  from {
+    transform: rotate(270deg); }
+  to {
+    transform: rotate(630deg); } }
+@keyframes time60-31 {
+  from {
+    transform: rotate(276deg); }
+  to {
+    transform: rotate(636deg); } }
+@keyframes time60-32 {
+  from {
+    transform: rotate(282deg); }
+  to {
+    transform: rotate(642deg); } }
+@keyframes time60-33 {
+  from {
+    transform: rotate(288deg); }
+  to {
+    transform: rotate(648deg); } }
+@keyframes time60-34 {
+  from {
+    transform: rotate(294deg); }
+  to {
+    transform: rotate(654deg); } }
+@keyframes time60-35 {
+  from {
+    transform: rotate(300deg); }
+  to {
+    transform: rotate(660deg); } }
+@keyframes time60-36 {
+  from {
+    transform: rotate(306deg); }
+  to {
+    transform: rotate(666deg); } }
+@keyframes time60-37 {
+  from {
+    transform: rotate(312deg); }
+  to {
+    transform: rotate(672deg); } }
+@keyframes time60-38 {
+  from {
+    transform: rotate(318deg); }
+  to {
+    transform: rotate(678deg); } }
+@keyframes time60-39 {
+  from {
+    transform: rotate(324deg); }
+  to {
+    transform: rotate(684deg); } }
+@keyframes time60-40 {
+  from {
+    transform: rotate(330deg); }
+  to {
+    transform: rotate(690deg); } }
+@keyframes time60-41 {
+  from {
+    transform: rotate(336deg); }
+  to {
+    transform: rotate(696deg); } }
+@keyframes time60-42 {
+  from {
+    transform: rotate(342deg); }
+  to {
+    transform: rotate(702deg); } }
+@keyframes time60-43 {
+  from {
+    transform: rotate(348deg); }
+  to {
+    transform: rotate(708deg); } }
+@keyframes time60-44 {
+  from {
+    transform: rotate(354deg); }
+  to {
+    transform: rotate(714deg); } }
+@keyframes time60-45 {
+  from {
+    transform: rotate(360deg); }
+  to {
+    transform: rotate(720deg); } }
+@keyframes time60-46 {
+  from {
+    transform: rotate(366deg); }
+  to {
+    transform: rotate(726deg); } }
+@keyframes time60-47 {
+  from {
+    transform: rotate(372deg); }
+  to {
+    transform: rotate(732deg); } }
+@keyframes time60-48 {
+  from {
+    transform: rotate(378deg); }
+  to {
+    transform: rotate(738deg); } }
+@keyframes time60-49 {
+  from {
+    transform: rotate(384deg); }
+  to {
+    transform: rotate(744deg); } }
+@keyframes time60-50 {
+  from {
+    transform: rotate(390deg); }
+  to {
+    transform: rotate(750deg); } }
+@keyframes time60-51 {
+  from {
+    transform: rotate(396deg); }
+  to {
+    transform: rotate(756deg); } }
+@keyframes time60-52 {
+  from {
+    transform: rotate(402deg); }
+  to {
+    transform: rotate(762deg); } }
+@keyframes time60-53 {
+  from {
+    transform: rotate(408deg); }
+  to {
+    transform: rotate(768deg); } }
+@keyframes time60-54 {
+  from {
+    transform: rotate(414deg); }
+  to {
+    transform: rotate(774deg); } }
+@keyframes time60-55 {
+  from {
+    transform: rotate(420deg); }
+  to {
+    transform: rotate(780deg); } }
+@keyframes time60-56 {
+  from {
+    transform: rotate(426deg); }
+  to {
+    transform: rotate(786deg); } }
+@keyframes time60-57 {
+  from {
+    transform: rotate(432deg); }
+  to {
+    transform: rotate(792deg); } }
+@keyframes time60-58 {
+  from {
+    transform: rotate(438deg); }
+  to {
+    transform: rotate(798deg); } }
+@keyframes time60-59 {
+  from {
+    transform: rotate(444deg); }
+  to {
+    transform: rotate(804deg); } }
+@keyframes time60-60 {
+  from {
+    transform: rotate(450deg); }
+  to {
+    transform: rotate(810deg); } }
+@keyframes time12-0 {
+  from {
+    transform: rotate(90deg); }
+  to {
+    transform: rotate(450deg); } }
+@keyframes time12-1 {
+  from {
+    transform: rotate(120deg); }
+  to {
+    transform: rotate(480deg); } }
+@keyframes time12-2 {
+  from {
+    transform: rotate(150deg); }
+  to {
+    transform: rotate(510deg); } }
+@keyframes time12-3 {
+  from {
+    transform: rotate(180deg); }
+  to {
+    transform: rotate(540deg); } }
+@keyframes time12-4 {
+  from {
+    transform: rotate(210deg); }
+  to {
+    transform: rotate(570deg); } }
+@keyframes time12-5 {
+  from {
+    transform: rotate(240deg); }
+  to {
+    transform: rotate(600deg); } }
+@keyframes time12-6 {
+  from {
+    transform: rotate(270deg); }
+  to {
+    transform: rotate(630deg); } }
+@keyframes time12-7 {
+  from {
+    transform: rotate(300deg); }
+  to {
+    transform: rotate(660deg); } }
+@keyframes time12-8 {
+  from {
+    transform: rotate(330deg); }
+  to {
+    transform: rotate(690deg); } }
+@keyframes time12-9 {
+  from {
+    transform: rotate(360deg); }
+  to {
+    transform: rotate(720deg); } }
+@keyframes time12-10 {
+  from {
+    transform: rotate(390deg); }
+  to {
+    transform: rotate(750deg); } }
+@keyframes time12-11 {
+  from {
+    transform: rotate(420deg); }
+  to {
+    transform: rotate(780deg); } }
+@keyframes time12-12 {
+  from {
+    transform: rotate(450deg); }
+  to {
+    transform: rotate(810deg); } }
 
-.clock-face{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.hand {
-    --hand-height: 6px;
-    width: 50%;
-    height: var(--hand-height);
-    background: black;
-    top: calc(50% - var(--hand-height)/2);
-    position: absolute;
-    transform: rotate(90deg);
-    transform-origin: 100%;
-    transition: all 0.05s ease-out;
-}
+/*# sourceMappingURL=main.css.map */

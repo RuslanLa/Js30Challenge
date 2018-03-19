@@ -1,0 +1,67 @@
+html {
+  height: 100%;
+  body {
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(147, 206, 222, 1) 0%,
+      rgba(117, 189, 209, 1) 41%,
+      rgba(73, 165, 191, 1) 100%
+    );
+    main {
+      --clock-size: 30rem;
+      height: 100%;
+      width: 100%;
+      --position-offset: calc(50% - var(--clock-size) / 2);
+      position: absolute;
+      top: var(--position-offset);
+      left: var(--position-offset);
+      .clock {
+        height: var(--clock-size);
+        width: var(--clock-size);
+        border: 35px solid white;
+        border-radius: 50%;
+        .clock-face {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          .hand {
+            --hand-height: 6px;
+            width: 50%;
+            height: var(--hand-height);
+            background: black;
+            top: calc(50% - var(--hand-height) / 2);
+            position: absolute;
+            transform: rotate(90deg);
+            transform-origin: 100%;
+            transition: all 0.05s ease-out;
+          }
+        }
+      }
+    }
+  }
+}
+
+@for $i from 0 through 60 {
+    $degrees: $i*6+90;
+  @keyframes time60-#{$i} {
+      from {
+          transform: rotate(#{$degrees}deg)
+      }
+      to {
+        transform: rotate(#{$degrees+360}deg)
+      }
+  }
+}
+
+@for $i from 0 through 12 {
+    $degrees: ($i/12)*360+90;
+  @keyframes time12-#{$i} {
+      from {
+          transform: rotate(#{$degrees}deg)
+      }
+      to {
+        transform: rotate(#{$degrees+360}deg)
+      }
+  }
+}
