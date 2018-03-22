@@ -10,7 +10,6 @@ class Hand extends Component {
     );
   }
   styles = (config, timeConfig) => {
-    debugger;
     const calculateDegrees = timeConfig =>
       timeConfig.timePartValue / timeConfig.maxTimePartValue * 360 + 90;
     return StyleSheet.create({
