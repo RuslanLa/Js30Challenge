@@ -1,9 +1,3 @@
-:root {
-  --img-border: 10px;
-  --img-border-color: #ffc600;
-  --img-filter-blur: 0px;
-}
-
 body {
   background: #4286f4;
   color: white;
@@ -44,6 +38,4 @@ h2 {
   height: auto;
   flex-grow: 1;
   align-self: center;
-  filter: blur(var(--img-filter-blur));
-  border: var(--img-border-color) var(--img-border) solid;
 }

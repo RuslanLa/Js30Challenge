@@ -1,30 +1,32 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import img from "./black-and-white-tiles-clean-corridor.jpg";
-
+import PageTitle from './PageTitle';
+import Controls from './Controls';
+import ScaledImage from './ScaledImage';
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      imgStyle: {
+        imgBorder: 10,
+        imgBorderColor: '#ffc600',
+        imgFilterBlur: 0
+      }
+    }
+  }
+
+  styleOnChange(style){
+    this.setState({
+      imgStyle: style
+    });
+  }
   render() {
     return (
       <React.Fragment>
-        <h2>Update CSS Variables with JS EXAMPLE</h2>
-        <div class="controls">
-          <div>
-            <label for="spacing">Spacing:</label>
-            <input id="spacing" type="range" name="img-border" min="10" max="200" value="10" data-sizing="px" />
-          </div>
-          <div>
-            <label for="blur">Blur:</label>
-            <input id="blur" type="range" name="img-filter-blur" min="0" max="25" value="10" data-sizing="px" />
-          </div>
-          <div>
-            <label for="base">Base Color:</label>
-            <input id="base" type="color" name="img-border-color" value="#ffc600" />
-          </div>
-        </div>
-        <div class="img-container">
-          <img class="scaled" src={img}></img>
-        </div>
+        <PageTitle />
+        <Controls styleOnChange={(style)=>this.styleOnChange(style)} values={this.state.imgStyle}/>
+        <ScaledImage style={this.state.imgStyle}/>
       </React.Fragment>
     );
   }
